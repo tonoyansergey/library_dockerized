@@ -1,0 +1,8 @@
+<div *ngIf="userName else elseBlock" class="wc">
+  <h1>Welcome, {{userName}}</h1>
+</div>
+<ng-template #elseBlock>
+  <h1>Please, <a routerLink="/login">Sign Up </a>or <a routerLink="/login">Log In</a></h1>
+
+</ng-template>
+

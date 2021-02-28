@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>Verification</h1>
+<mat-dialog-content>
+  <mat-form-field>
+    <input #vCode ngModel type="text" matInput placeholder="Verification code" required>
+    <ng-template ngIf="{{rCode}}">
+      <p>{{rCode}}</p>
+    </ng-template>
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button class="btn btn-outline-secondary" (click)="close()">Cancel</button>
+  <button class="btn btn-outline-primary" (click)="submitVCode(vCode.value)">Book</button>
+</mat-dialog-actions>

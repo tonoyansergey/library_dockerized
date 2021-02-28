@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>Booking Details</h1>
+<mat-dialog-content>
+    <p>{{theBook.title}}</p>
+    <p>{{theBook.author.authorName}}</p>
+  <mat-form-field>
+    <input #email ngModel email pattern="{{emailPattern}}" type="email" matInput placeholder="Your email" required>
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button class="btn btn-outline-secondary" (click)="close()">Cancel</button>
+  <button class="btn btn-outline-primary" (click)="verifyEmail(email.value)">Book</button>
+</mat-dialog-actions>
